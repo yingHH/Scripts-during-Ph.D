@@ -137,7 +137,7 @@ def start_chrome(download_dir, webdrivers='chromedriver.85.0.4183.38.exe', exten
 
     return driver
 
-def login_Ghelper(driver, url='chrome-extension://cieikaeocafmceoapfogpffaalkncpkc/login.html', email='hhhyyy1992117@qq.com', passwd='441300'):
+def login_Ghelper(driver, url='chrome-extension://cieikaeocafmceoapfogpffaalkncpkc/login.html', email='hhhyyy1992117@qq.com', passwd='********'):
     """
     (function) Login extension Ghelper.
 
