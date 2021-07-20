@@ -1,0 +1,105 @@
+
+=== Using SE_pipline ... ===
+
+
+=== Running cutadapt ... ===
+
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -q 15,10 -m 20 -o ./bam/trim_BGC_0_1.fastq.gz /home/data/GC-FOXL2-RNA/BGC_0_1.fq
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 145.31 s (12 us/read; 5.01 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              12,143,161
+Reads with adapters:                   307,992 (2.5%)
+Reads that were too short:                   0 (0.0%)
+Reads written (passing filters):    12,143,161 (100.0%)
+
+Total basepairs processed:   595,014,889 bp
+Quality-trimmed:                       0 bp (0.0%)
+Total written (filtered):    594,003,140 bp (99.8%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC; Type: regular 3'; Length: 34; Trimmed: 307992 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-34 bp: 3
+
+Bases preceding removed adapters:
+  A: 30.2%
+  C: 32.3%
+  G: 24.5%
+  T: 12.9%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	240187	189736.9	0	240187
+4	53001	47434.2	0	53001
+5	12483	11858.6	0	12483
+6	1174	2964.6	0	1174
+7	382	741.2	0	382
+8	189	185.3	0	189
+9	406	46.3	0	155 251
+10	52	11.6	1	0 52
+11	96	2.9	1	0 96
+12	10	0.7	1	0 10
+13	4	0.2	1	0 4
+15	2	0.0	1	0 2
+16	2	0.0	1	0 2
+17	1	0.0	1	0 1
+18	1	0.0	1	0 1
+19	1	0.0	1	0 1
+21	1	0.0	2	0 1
+
+
+=== cutadapt Done ===
+
+
+=== Running hisat2 ... ===
+
+Time loading forward index: 00:00:01
+Time loading reference: 00:00:00
+Multiseed full-index search: 00:00:52
+12143161 reads; of these:
+  12143161 (100.00%) were unpaired; of these:
+    1868566 (15.39%) aligned 0 times
+    9972408 (82.12%) aligned exactly 1 time
+    302187 (2.49%) aligned >1 times
+84.61% overall alignment rate
+Time searching: 00:00:52
+Overall time: 00:00:53
+
+=== hisat2 Done ===
+
+
+=== sam to bam ===
+
+
+=== sort bam by name ===
+
+[bam_sort_core] merging from 3 files and 1 in-memory blocks...
+
+=== mark mate tag ===
+
+
+=== sort bam by position ===
+
+[bam_sort_core] merging from 3 files and 1 in-memory blocks...
+
+=== mark and remove duplication ===
+
+READ 11069571 WRITTEN 7244886 
+EXCLUDED 794976 EXAMINED 10274595
+PAIRED 0 SINGLE 10274595
+DULPICATE PAIR 0 DUPLICATE SINGLE 3824685
+DUPLICATE TOTAL 3824685
+
+=== index bam ===
+
+Wed Apr 18 10:47:22 CST 2018
+
+******************************FIN*********************************
+

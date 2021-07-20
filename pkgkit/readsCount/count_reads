@@ -1,0 +1,3 @@
+#! /bin/bash
+
+python3 ~/bin/pkgkit/readsCount/count_reads_by_bins.py $@

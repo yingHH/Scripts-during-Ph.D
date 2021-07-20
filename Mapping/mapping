@@ -1,0 +1,2 @@
+#! /bin/bash
+python /home/yingh/bin/Mapping/__main__.py $@
